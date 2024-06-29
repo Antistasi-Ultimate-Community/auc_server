@@ -4,3 +4,5 @@
 *.png
 build
 release
+
+__private__.py
