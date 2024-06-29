@@ -5,8 +5,8 @@ class CfgFunctions
         class py 
         {
             file = QPATHTOFOLDER(functions\py);
-            class grabUIDs {};
-            class sendUIDs {};
+            class grabUsers {};
+            class sendUsers {};
         };
     };
 };
