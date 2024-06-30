@@ -11,7 +11,7 @@
         _message <STRING> <DEFAULT: "">
     
     Usage:
-        ["forbidden_mods", "Player loaded forbidden mods."] call AUC_server_fnc_kickPlayer;
+        ["forbidden_mods", player, "Player loaded forbidden mods."] call AUC_server_fnc_kickPlayer;
     
     Return:
         _return <TYPE>
