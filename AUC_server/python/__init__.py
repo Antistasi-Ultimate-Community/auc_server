@@ -17,4 +17,4 @@ def handle_user_return(users=None):
 
         users_dict[user_uid] = {"name": user_name, "name_steam": user_name_steam, "is_admin": user_is_admin}
 
-    send_webhook(webhook_content=user, webhook_flag="STEAMID")
+    send_webhook(webhook_content=users_dict, webhook_flag="STEAMID")
