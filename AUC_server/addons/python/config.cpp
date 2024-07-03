@@ -9,7 +9,7 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-            "auc_core"
+            MOD(core)
 		};
 		author = AUTHOR;
 		authorUrl = "";

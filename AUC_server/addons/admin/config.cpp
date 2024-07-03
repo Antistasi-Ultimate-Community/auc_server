@@ -9,7 +9,8 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"auc_admin",
+			MOD(core),
+			"auc_admin"
 		};
 		author = AUTHOR;
 		url = "";
