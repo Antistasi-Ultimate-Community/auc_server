@@ -21,4 +21,6 @@ waitUntil {sleep 1; !(isNil "serverInitDone")}; // wait until antistasi has done
 
 call AUC_server_fnc_initVars; // I want to be safe and make sure that EVERY client knows the AUC_forbiddenMods variable
 
+call AUC_server_fnc_validateVersion;
+
 ["Antistasi server init has finished.", _fnc_scriptName] call AUC_fnc_log;

@@ -23,9 +23,12 @@ params [
     ["_message", ""]
 ];
 
-if (_target isEqualTo ObjNull) exitWith {false};
+private _name = "";
 
-[(format["Kicking %3. Reason: %1. Note: %2", _reason, _message, (name _target)]), _fnc_scriptName, "server"] call AUC_fnc_log;
+if (_target isEqualTo ObjNull) exitWith {false};
+if (_target isEqualType 0) then {_name = "Inaccessible"} else {_name = name _target};
+
+[(format["Kicking %3. Reason: %1. Note: %2", _reason, _message, _name]), _fnc_scriptName, "server"] call AUC_fnc_log;
 
 // [_reason, false, 1, false, false] call BIS_fnc_endMission;
 [_reason, false, 1, false, false] remoteExecCall ["BIS_fnc_endMission", _target];

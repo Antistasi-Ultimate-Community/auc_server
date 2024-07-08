@@ -9,6 +9,9 @@ class CfgFunctions
             class initPost {postInit = 1};
             class initPre {preInit = 1};
             class initVars {};
+            class sendVarToServer {};
+            class validateVersion {};
+            class version {};
         };
         class utility
         {

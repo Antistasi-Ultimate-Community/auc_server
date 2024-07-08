@@ -26,4 +26,6 @@ AUC_forbiddenMods = [ // list of CfgPatches names to block
     "PA_arsenal" //Yet another personal arsenal mod
 ];
 
+call AUC_server_fnc_version;
+
 publicVariable "AUC_forbiddenMods"; // This will broadcast it to each client (+ JIP)
