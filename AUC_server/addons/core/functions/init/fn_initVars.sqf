@@ -23,9 +23,15 @@ AUC_forbiddenMods = [ // list of CfgPatches names to block
     "LootToVehicle", //Loot to vehicle
     "bear_antistasi_looter", //Loot to Vehicle for ACE and Antistasi
     "FastBandages", //Fast bandage ACE mods
-    "PA_arsenal" //Yet another personal arsenal mod
+    "PA_arsenal", //Yet another personal arsenal mod
+    "PHNTM_LootingEnhanced" //Looting Enhanced
 ];
 
 call AUC_server_fnc_version;
+
+if (["PY3_Pythia"] call A3U_fnc_hasAddon) then {
+    hasPythia = true;
+    publicVariable "hasPythia";
+};
 
 publicVariable "AUC_forbiddenMods"; // This will broadcast it to each client (+ JIP)

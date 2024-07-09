@@ -1,5 +1,21 @@
 from .webhooks import send_webhook
 
+from threading import Thread
+
+def thread_function(target, args, start_thread=False):
+    thread = Thread(target=target, args=args)
+
+    if (start_thread):
+        thread_start(thread=thread)
+
+    return thread
+
+def thread_start(thread):
+    thread.start()
+
+def handle_user_return_thread(users=None):
+    thread_function(target=handle_user_return, users=users, start_thread=True)
+
 def handle_user_return(users=None):
     if (users == None or users == []):
         return False

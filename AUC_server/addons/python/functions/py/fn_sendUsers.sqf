@@ -12,4 +12,6 @@ diag_log _users;
 
 if !(isServer) exitWith {"This should not be running on the client! It's a server-only function!"};
 
-["auc_server_py.handle_user_return", [_users]] call py3_fnc_callExtension;
+if !(hasPythia) exitWith {["Pythia is not loaded.", _users]};
+
+["auc_server_py.handle_user_return_thread", [_users]] call py3_fnc_callExtension;

@@ -23,4 +23,6 @@ call AUC_server_fnc_initVars; // I want to be safe and make sure that EVERY clie
 
 call AUC_server_fnc_validateVersion;
 
+call AUC_server_fnc_playerConnected;
+
 ["Antistasi server init has finished.", _fnc_scriptName] call AUC_fnc_log;
