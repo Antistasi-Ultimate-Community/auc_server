@@ -1,7 +1,7 @@
 // This initial loop should handle players who joined before the server init finished, therefore never being processed by PlayerConnected
 {
-    private _versionFormatted = format["auc_client_version_%1", getPlayerUID _x];
-    private _version = serverNamespace getVariable [_versionFormatted, "none"];
+    private _versionFormatted = format["auc_client_%1", getPlayerUID _x];
+    private _version = serverNamespace getVariable [(_versionFormatted#0), "none"];
 
 	["Starting client version validation.", _fnc_scriptName] call AUC_server_fnc_log;
 	[format["%1 checked, version: %2", name _x, _version], _fnc_scriptName] call AUC_server_fnc_log;

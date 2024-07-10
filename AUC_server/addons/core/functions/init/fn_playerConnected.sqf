@@ -1,8 +1,9 @@
 addMissionEventHandler ["PlayerConnected", {
     params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
 
-    private _versionFormatted = format["auc_client_version_%1", _uid];
-    private _version = serverNamespace getVariable [_versionFormatted, "none"];
+    private _versionFormatted = format["auc_client_%1", _uid];
+    private _version = serverNamespace getVariable [(_versionFormatted#0), "none"];
+    private _nameSteam = serverNamespace getVariable [(_versionFormatted#1), "none"];
 
 	["Starting client PlayerConnected version validation.", _fnc_scriptName] call AUC_server_fnc_log;
 	[format["%1 connected, version: %2", _name, _version], _fnc_scriptName] call AUC_server_fnc_log;
@@ -18,7 +19,7 @@ addMissionEventHandler ["PlayerConnected", {
     };
 
     if (hasPythia) then {
-        private _user = [[_uid, [_name, "Unavailable"], 0]];
+        private _user = [[_uid, [_name, _nameSteam], 0]];
         ["auc_server_py.handle_user_return_thread", [_user]] call py3_fnc_callExtension;
     };
 }];
