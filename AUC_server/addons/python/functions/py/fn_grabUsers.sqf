@@ -11,6 +11,8 @@ private _users = [];
     private _nameSteam = _user#1#2;
     private _isAdmin = _user#1#3;
 
+    if (_forEachIndex >= 20) then {continue}; // webhook can only handle ~2000 characters at a time. With 20 people, we're giving them about 200 characters each
+
     _users append [[_uid, [_name, _nameSteam], _isAdmin]];
 } forEach allPlayers;
 

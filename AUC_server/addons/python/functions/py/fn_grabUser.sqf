@@ -16,3 +16,5 @@ private _nameSteam = _data#5;
 private _isAdmin = _data#8;
 
 private _data = [_data, [_uid, _name, _nameSteam, _isAdmin]];
+
+_data;
