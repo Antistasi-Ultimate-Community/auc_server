@@ -7,5 +7,6 @@ def copy_dir(source_dir="AUC_server/python", end_dir="build/@AUC_server/python")
     return paths
 
 if (__name__ == "__main__"):
-    paths = copy_dir()
-    print(paths)
+    pathsFirst = copy_dir(source_dir="build/@AUC_server", end_dir="build/@AUC_server_python")
+    pathsLast = copy_dir(source_dir="AUC_server/python", end_dir="build/@AUC_server_python/python")
+    print(pathsFirst, pathsLast)
