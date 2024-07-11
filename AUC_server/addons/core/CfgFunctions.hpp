@@ -5,6 +5,7 @@ class CfgFunctions
         class init 
         {
             file = QPATHTOFOLDER(functions\init);
+            class getPlayer {};
             class initAntistasi {};
             class initPost {postInit = 1};
             class initPre {preInit = 1};

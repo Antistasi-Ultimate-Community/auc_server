@@ -1,9 +1,10 @@
 addMissionEventHandler ["PlayerConnected", {
     params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
 
-    private _versionFormatted = format["auc_client_%1", _uid];
-    private _version = serverNamespace getVariable [(_versionFormatted#0), "none"];
-    private _nameSteam = serverNamespace getVariable [(_versionFormatted#1), "none"];
+    private _player = [_uid] call AUC_server_fnc_getPlayer;
+
+    private _version = _player#0;
+    private _nameSteam = _player#1;
 
 	["Starting client PlayerConnected version validation.", _fnc_scriptName] call AUC_server_fnc_log;
 	[format["%1 connected, version: %2", _name, _version], _fnc_scriptName] call AUC_server_fnc_log;
