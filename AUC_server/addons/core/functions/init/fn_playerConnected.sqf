@@ -1,5 +1,8 @@
-addMissionEventHandler ["PlayerConnected", {
+addMissionEventHandler ["PlayerConnected", 
+{
     params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+
+    if ("hc" in _name) exitWith {};
 
     private _player = [_uid] call AUC_server_fnc_getPlayer;
 

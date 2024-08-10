@@ -3,6 +3,8 @@
     private _uid = getPlayerUID _x;
     private _name = name _x;
 
+    if ("hc" in _name) then {continue};
+
     private _player = [_uid] call AUC_server_fnc_getPlayer;
 
     private _version = _player#0;
