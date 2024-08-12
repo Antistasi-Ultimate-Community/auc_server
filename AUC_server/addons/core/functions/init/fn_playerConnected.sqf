@@ -22,7 +22,7 @@ addMissionEventHandler ["PlayerConnected",
         ] call AUC_server_fnc_kickPlayer;
     };
 
-    if (hasPythia) then {
+    if (!(isNil "hasPythia") || {hasPythia}) then {
         private _user = [[_uid, [_name, _nameSteam], 0]];
         ["auc_server_py.handle_user_return_thread", [_user]] call py3_fnc_callExtension;
     } else {

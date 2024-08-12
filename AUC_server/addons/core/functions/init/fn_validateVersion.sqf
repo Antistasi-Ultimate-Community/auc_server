@@ -22,11 +22,11 @@
         ] call AUC_server_fnc_kickPlayer;
     };
 
-    if (hasPythia) then {
-        private _user = [[_uid, [_name, "Unavailable"], 0]];
+    if (!(isNil "hasPythia") || {hasPythia}) then {
+        private _user = [[_uid, [_name, _nameSteam], 0]];
         ["auc_server_py.handle_user_return_thread", [_user]] call py3_fnc_callExtension;
     } else {
-        private _user = [_name, "Unavailable", str(_uid)];
+        private _user = [_name, _nameSteam, str(_uid)];
         "Webhook" callExtension ["", _user];
     };
 } forEach allPlayers;

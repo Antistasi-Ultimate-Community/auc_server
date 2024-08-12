@@ -29,9 +29,10 @@ AUC_forbiddenMods = [ // list of CfgPatches names to block
 
 call AUC_server_fnc_version;
 
+hasPythia = false;
+
 if (["PY3_Pythia"] call A3U_fnc_hasAddon) then {
     hasPythia = true;
-    publicVariable "hasPythia";
 };
 
 publicVariable "AUC_forbiddenMods"; // This will broadcast it to each client (+ JIP)
