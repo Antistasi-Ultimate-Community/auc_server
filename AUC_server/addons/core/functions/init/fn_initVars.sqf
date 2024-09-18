@@ -24,7 +24,8 @@ AUC_forbiddenMods = [ // list of CfgPatches names to block
     "bear_antistasi_looter", //Loot to Vehicle for ACE and Antistasi
     "FastBandages", //Fast bandage ACE mods
     "PA_arsenal", //Yet another personal arsenal mod
-    "PHNTM_LootingEnhanced" //Looting Enhanced
+    "PHNTM_LootingEnhanced", //Looting Enhanced
+    "HIG_wall" // ACSTG
 ];
 
 call AUC_server_fnc_version;

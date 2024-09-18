@@ -1,3 +1,5 @@
+// This function isn't being used anymore, going to keep just incase we want to use it again in future
+
 // This initial loop should handle players who joined before the server init finished, therefore never being processed by PlayerConnected
 {
     private _uid = getPlayerUID _x;

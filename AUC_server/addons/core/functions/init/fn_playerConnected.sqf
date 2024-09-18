@@ -9,18 +9,7 @@ addMissionEventHandler ["PlayerConnected",
     private _version = _player#0;
     private _nameSteam = _player#1;
 
-	["Starting client PlayerConnected version validation.", _fnc_scriptName] call AUC_server_fnc_log;
-	[format["%1 connected, version: %2", _name, _version], _fnc_scriptName] call AUC_server_fnc_log;
-
-    if (_version != AUC_serverVersion || {_version isEqualTo "none"}) then {
-        [
-            "kick_update", _owner, format [
-                "Player has version mismatch. Client: %1 | Server: %2", 
-                _version, 
-                AUC_serverVersion
-            ]
-        ] call AUC_server_fnc_kickPlayer;
-    };
+	// [format["%1 connected, version: %2", _name, _version], _fnc_scriptName] call AUC_server_fnc_log; // not needed anymore, version mismatches aren't as big of a deal anymore
 
     if (!(isNil "hasPythia") && {hasPythia}) then {
         private _user = [[_uid, [_name, _nameSteam], 0]];
