@@ -25,7 +25,8 @@ AUC_forbiddenMods = [ // list of CfgPatches names to block
     "FastBandages", //Fast bandage ACE mods
     "PA_arsenal", //Yet another personal arsenal mod
     "PHNTM_LootingEnhanced", //Looting Enhanced
-    "HIG_wall" // ACSTG
+    "HIG_wall", // ACSTG
+    "NSS_Admin_Console" // NSS Admin Console
 ];
 
 call AUC_server_fnc_version;
