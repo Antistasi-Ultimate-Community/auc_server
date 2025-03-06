@@ -17,8 +17,6 @@
 
 params ["_player"];
 
-if !([_player] call AUC_server_fnc_canAddMember) exitWith {false};
-
 private _uid = getPlayerUID _player;
 
 membersX pushBackUnique _uid;
@@ -28,5 +26,7 @@ _player setVariable ["eligible", true, true];
 
 publicVariable "membersX";
 playSound "A3AP_UiSuccess";
+
+[format ["Added %1 to the member list.", _uid]] call AUC_server_fnc_log;
 
 true;

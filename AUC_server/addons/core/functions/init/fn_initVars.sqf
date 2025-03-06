@@ -29,12 +29,9 @@ AUC_forbiddenMods = [ // list of CfgPatches names to block
     "NSS_Admin_Console" // NSS Admin Console
 ];
 
+publicVariable "AUC_forbiddenMods";
+
+call AUC_server_fnc_members;
 call AUC_server_fnc_version;
 
-hasPythia = false;
-
-if (["PY3_Pythia"] call A3U_fnc_hasAddon) then {
-    hasPythia = true;
-};
-
-publicVariable "AUC_forbiddenMods"; // This will broadcast it to each client (+ JIP)
+hasPythia = ["PY3_Pythia"] call A3U_fnc_hasAddon;
