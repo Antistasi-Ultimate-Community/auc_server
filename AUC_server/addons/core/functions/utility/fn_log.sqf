@@ -23,4 +23,4 @@ params [
 
 diag_log (" | AUC Server Addon" + " | File: " + _file + " | " + _message + " | ")
 
-//| AUC Client | File: _file | _message |
+//| AUC Server Addon | File: _file | _message |
