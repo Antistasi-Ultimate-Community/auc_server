@@ -19,6 +19,8 @@ params ["_player"];
 
 private _uid = getPlayerUID _player;
 
+if (_uid in membersX) exitWith {true};
+
 membersX pushBackUnique _uid;
 _player setVariable ["eligible", true, true];
 [localize "STR_A3A_OrgPlayers_membership_header", format [localize "STR_A3A_OrgPlayers_membership_success_add",name _player]] call A3A_fnc_customHint;
