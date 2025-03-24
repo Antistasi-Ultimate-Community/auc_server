@@ -217,4 +217,10 @@ class AUC_Members
         uid = "76561198079251557";
         discordID = "98274036634615808";
     };
+    class member_doval : member_base
+    {
+        name = "doval";
+        uid = "76561198139793943";
+        discordID = "571917191759527936";
+    };
 };
